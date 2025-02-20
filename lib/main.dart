@@ -46,125 +46,139 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                image: DecorationImage(
-                  image: AssetImage('assets/images/NFTEND.gif'),
-                  fit: BoxFit.cover,
-                  colorFilter: ColorFilter.mode(
-                    Colors.red.withOpacity(0.3),
-                    BlendMode.overlay,
-                  ),
-                ),
-              ),
-              child: Stack(
-                children: [
-                  // Menu items on left side
-                  Positioned(
-                    left: 40,
-                    top: 80,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        MenuLink(
-                          title: "HOME",
-                          url: "https://your-home-url.com",
-                        ),
-                        SizedBox(height: 20),
-                        NonClickableMenuLinkWithHover(
-                          title: "DEXSCREENER",
-                          hoverText: "AFTER GRADUATION",
-                        ),
-                        SizedBox(height: 20),
-                        MenuLink(
-                          title: "GRAPH",
-                          url: "https://your-graph-url.com",
-                        ),
-                      ],
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/NFTEND.gif'),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                        Colors.red.withOpacity(0.3),
+                        BlendMode.overlay,
+                      ),
                     ),
                   ),
-
-                  // Socials section - right side
-                  Positioned(
-                    right: 40,
-                    bottom: 80,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          "[SOCIALS]",
-                          style: GoogleFonts.orbitron(
-                            color: Colors.white,
-                            fontSize: 18,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Row(
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 40,
+                        top: 80,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SocialIconButton(
-                              imagePath: 'assets/images/website.webp',
-                              label: "",
-                              url: 'https://x.com/EndofSOLNFTs',
+                            MenuLink(
+                              title: "HOME",
+                              url: "https://endofnft.netlify.app/",
                             ),
-                            SizedBox(width: 10),
-                            SocialIconButton(
-                              imagePath: 'assets/images/x.webp',
-                              label: "",
-                              url: 'https://x.com/EndofSOLNFTs',
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            SocialIconButton(
-                              imagePath: 'assets/images/pumpfun.webp',
-                              label: "",
-                              url: 'https://pump.fun',
-                            ),
-                            SizedBox(width: 10),
-                            NonClickableSocialIconWithHover(
-                              imagePath: 'assets/images/dexscreener.webp',
+                            SizedBox(height: 20),
+                            NonClickableMenuLinkWithHover(
+                              title: "DEXSCREENER",
                               hoverText: "AFTER GRADUATION",
                             ),
+                            SizedBox(height: 20),
+                            MenuLink(
+                              title: "CHART",
+                              url: "https://pump.fun/board",
+                            ),
                           ],
+                        ),
+                      ),
+                      Positioned(
+                        right: 40,
+                        bottom: 80,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              "[SOCIALS]",
+                              style: GoogleFonts.orbitron(
+                                color: Colors.white,
+                                fontSize: 18,
+                                letterSpacing: 1.5,
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              children: [
+                                SocialIconButton(
+                                  imagePath: 'assets/images/website.webp',
+                                  label: "",
+                                  url: 'https://endofnft.netlify.app/',
+                                ),
+                                SizedBox(width: 10),
+                                SocialIconButton(
+                                  imagePath: 'assets/images/x.webp',
+                                  label: "",
+                                  url: 'https://x.com/EndofSOLNFTs',
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              children: [
+                                SocialIconButton(
+                                  imagePath: 'assets/images/pumpfun.webp',
+                                  label: "",
+                                  url: 'https://pump.fun',
+                                ),
+                                SizedBox(width: 10),
+                                NonClickableSocialIconWithHover(
+                                  imagePath: 'assets/images/dexscreener.webp',
+                                  hoverText: "AFTER GRADUATION",
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border(
+                      top: BorderSide(color: Colors.white, width: 2.0),
+                    ),
+                  ),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "2025 © ALL RIGHTS RESERVED",
+                          style: GoogleFonts.orbitron(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "Don’t be sad it’s over, Be happy that it happened. This is the END of NFTS",
+                          style: GoogleFonts.orbitron(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontStyle: FontStyle.italic,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
-            ),
-
-            // Footer
-            Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                border: Border(
-                  top: BorderSide(color: Colors.white, width: 2.0),
                 ),
-              ),
-              child: Center(
-                child: Text(
-                  "2025 © ALL RIGHTS RESERVED",
-                  style: GoogleFonts.orbitron(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
