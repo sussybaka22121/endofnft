@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "endofnft"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "endofnft-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
